@@ -7,100 +7,103 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
+            color: #333;
         }
         h2 {
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            color: #222;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 4px;
         }
         ul {
             list-style-type: none;
             padding-left: 0;
+            margin-bottom: 25px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+        li:hover {
+            background-color: #f5f7fa;
         }
         .icon {
             margin-right: 8px;
             vertical-align: middle;
-            font-size: 1.2em;
-            transition: transform 0.3s ease, color 0.3s ease;
+            font-size: 1.1em;
+            color: #555;
         }
-        /* Icon hover animation */
-        li:hover .icon {
-            transform: scale(1.3) rotate(5deg);
-            color: #007acc;
+        img.icon {
+            display: inline-block;
         }
 
         /* Soft Skills section styling */
         .soft-skills {
-            background-color: #eef7f9;
-            border-left: 4px solid #5bc0de;
+            background-color: #f8f9fa;
+            border: 1px solid #e5e5e5;
             padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
         }
         .soft-skills h2 {
             border-bottom: none;
-            color: #31708f;
             margin-bottom: 10px;
+            color: #444;
         }
-        /* Tag style for soft skills */
         .skill-tag {
             display: inline-block;
-            background-color: #5bc0de;
-            color: white;
-            padding: 5px 10px;
+            background-color: #e6e9ed;
+            color: #333;
+            padding: 5px 12px;
             margin: 5px 5px 0 0;
-            border-radius: 15px;
+            border-radius: 4px;
             font-size: 0.9em;
             font-weight: 500;
-            transition: all 0.2s ease-in-out;
-            cursor: default;
+            transition: background-color 0.15s ease;
         }
-        /* Hover effect */
         .skill-tag:hover {
-            background-color: #31b0d5;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
+            background-color: #d9dde3;
         }
     </style>
 </head>
 <body>
     <h2>Languages & Frameworks</h2>
     <ul>
-        <li><i class="devicon-php-plain colored icon"></i>PHP (Expert)</li>
-        <li><i class="devicon-laravel-plain colored icon"></i>Laravel (Expert)</li>
-        <li><i class="devicon-javascript-plain colored icon"></i>JavaScript (Proficient)</li>
-        <li><i class="devicon-vuejs-plain colored icon"></i>Vue.js (Proficient)</li>
-        <li><i class="devicon-css3-plain colored icon"></i>CSS (Proficient)</li>
-        <li><i class="devicon-bootstrap-plain colored icon"></i>Bootstrap (Proficient)</li>
-        <li><i class="devicon-jquery-plain colored icon"></i>jQuery (Proficient)</li>
+        <li><i class="devicon-php-plain icon"></i>PHP (Expert)</li>
+        <li><i class="devicon-laravel-plain icon"></i>Laravel (Expert)</li>
+        <li><i class="devicon-javascript-plain icon"></i>JavaScript (Proficient)</li>
+        <li><i class="devicon-vuejs-plain icon"></i>Vue.js (Proficient)</li>
+        <li><i class="devicon-css3-plain icon"></i>CSS (Proficient)</li>
+        <li><i class="devicon-bootstrap-plain icon"></i>Bootstrap (Proficient)</li>
+        <li><i class="devicon-jquery-plain icon"></i>jQuery (Proficient)</li>
     </ul>
 
     <h2>Databases</h2>
     <ul>
-        <li><i class="devicon-mysql-plain colored icon"></i>MySQL (Proficient)</li>
-        <li><i class="devicon-postgresql-plain colored icon"></i>PostgreSQL (Proficient)</li>
-        <li><i class="devicon-mongodb-plain colored icon"></i>MongoDB (Familiar)</li>
-        <li><img src="elasticsearch.svg" alt="Elasticsearch Logo" class="icon" width="20">Elasticsearch (Intermediate)</li>
+        <li><i class="devicon-mysql-plain icon"></i>MySQL (Proficient)</li>
+        <li><i class="devicon-postgresql-plain icon"></i>PostgreSQL (Proficient)</li>
+        <li><i class="devicon-mongodb-plain icon"></i>MongoDB (Familiar)</li>
+        <li><img src="elasticsearch.svg" alt="Elasticsearch Logo" class="icon" width="18">Elasticsearch (Intermediate)</li>
     </ul>
 
     <h2>Cloud & DevOps</h2>
     <ul>
-        <li><i class="devicon-amazonwebservices-plain colored icon"></i>AWS (Familiar)</li>
-        <li><i class="devicon-docker-plain colored icon"></i>Docker (Familiar)</li>
-        <li><i class="devicon-githubactions-plain colored icon"></i>GitHub Actions (Proficient)</li>
+        <li><i class="devicon-amazonwebservices-plain icon"></i>AWS (Familiar)</li>
+        <li><i class="devicon-docker-plain icon"></i>Docker (Familiar)</li>
+        <li><i class="devicon-githubactions-plain icon"></i>GitHub Actions (Proficient)</li>
     </ul>
 
     <h2>Tools & Platforms</h2>
     <ul>
-        <li><i class="devicon-git-plain colored icon"></i>Git</li>
+        <li><i class="devicon-git-plain icon"></i>Git</li>
         <li>Composer</li>
         <li>npm/yarn</li>
         <li>Postman</li>
