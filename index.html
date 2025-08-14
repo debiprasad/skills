@@ -1,163 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Skillset</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <style>
-    :root {
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-      --card-bg: #fff;
-      --heading-border: #007acc;
-      --tag-bg: #007acc;
-      --tag-text: #fff;
-      --shadow: rgba(0,0,0,0.1);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-color: #121212;
-        --text-color: #e0e0e0;
-        --card-bg: #1e1e1e;
-        --heading-border: #4ea6ff;
-        --tag-bg: #4ea6ff;
-        --tag-text: #000;
-        --shadow: rgba(0,0,0,0.6);
-      }
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      padding: 20px;
-      line-height: 1.5;
-    }
-    h2 {
-      margin-top: 40px;
-      font-size: 1.8em;
-      border-bottom: 3px solid var(--heading-border);
-      padding-bottom: 5px;
-    }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .skill-card {
-      background: var(--card-bg);
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 6px var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .skill-card:hover {
-      transform: translateY(-4px);
-    }
-    .skill-card i,
-    .skill-card img {
-      font-size: 36px;
-      margin-bottom: 10px;
-      -webkit-filter: none;
-      filter: none;
-      color-scheme: light dark; /* prevent auto-darkening */
-    }
-    .soft-skills {
-      background: var(--card-bg);
-      border-radius: 8px;
-      padding: 15px;
-      margin-top: 15px;
-    }
-    .soft-skills ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .soft-skills li {
-      background: var(--tag-bg);
-      color: var(--tag-text);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      font-weight: 500;
-    }
-
-    /* Brand hover glows */
-    .skill-card[data-brand="php"]:hover { box-shadow: 0 6px 12px rgba(79, 93, 149, 0.6); }
-    .skill-card[data-brand="laravel"]:hover { box-shadow: 0 6px 12px rgba(255, 45, 32, 0.6); }
-    .skill-card[data-brand="js"]:hover { box-shadow: 0 6px 12px rgba(240, 219, 79, 0.6); }
-    .skill-card[data-brand="vue"]:hover { box-shadow: 0 6px 12px rgba(65, 184, 131, 0.6); }
-    .skill-card[data-brand="css"]:hover { box-shadow: 0 6px 12px rgba(38, 77, 228, 0.6); }
-    .skill-card[data-brand="bootstrap"]:hover { box-shadow: 0 6px 12px rgba(86, 61, 124, 0.6); }
-    .skill-card[data-brand="jquery"]:hover { box-shadow: 0 6px 12px rgba(0, 99, 155, 0.6); }
-    .skill-card[data-brand="mysql"]:hover { box-shadow: 0 6px 12px rgba(0, 117, 143, 0.6); }
-    .skill-card[data-brand="postgres"]:hover { box-shadow: 0 6px 12px rgba(49, 103, 154, 0.6); }
-    .skill-card[data-brand="mongodb"]:hover { box-shadow: 0 6px 12px rgba(75, 161, 74, 0.6); }
-    .skill-card[data-brand="elasticsearch"]:hover { box-shadow: 0 6px 12px rgba(249, 174, 46, 0.6); }
-    .skill-card[data-brand="aws"]:hover { box-shadow: 0 6px 12px rgba(255, 153, 0, 0.6); }
-    .skill-card[data-brand="docker"]:hover { box-shadow: 0 6px 12px rgba(0, 123, 194, 0.6); }
-    .skill-card[data-brand="gha"]:hover { box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); }
-    .skill-card[data-brand="git"]:hover { box-shadow: 0 6px 12px rgba(240, 80, 51, 0.6); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Skillset</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            color: #222;
+            border-left: 5px solid #0078d4;
+            padding-left: 10px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .skill-card {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .icon {
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        .skill-name {
+            font-weight: 500;
+        }
+        .soft-skills {
+            background-color: #eef6ff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .soft-skills li {
+            margin: 6px 0;
+        }
+    </style>
 </head>
 <body>
 
-  <h2>Languages & Frameworks</h2>
-  <div class="skills-grid">
-    <div class="skill-card" data-brand="php"><i class="devicon-php-plain colored"></i><p>PHP (Expert)</p></div>
-    <div class="skill-card" data-brand="laravel"><i class="devicon-laravel-plain colored"></i><p>Laravel (Expert)</p></div>
-    <div class="skill-card" data-brand="js"><i class="devicon-javascript-plain colored"></i><p>JavaScript (Proficient)</p></div>
-    <div class="skill-card" data-brand="vue"><i class="devicon-vuejs-plain colored"></i><p>Vue.js (Proficient)</p></div>
-    <div class="skill-card" data-brand="css"><i class="devicon-css3-plain colored"></i><p>CSS (Proficient)</p></div>
-    <div class="skill-card" data-brand="bootstrap"><i class="devicon-bootstrap-plain colored"></i><p>Bootstrap (Proficient)</p></div>
-    <div class="skill-card" data-brand="jquery"><i class="devicon-jquery-plain colored"></i><p>jQuery (Proficient)</p></div>
-  </div>
+    <h2>Languages & Frameworks</h2>
+    <div class="grid">
+        <div class="skill-card"><i class="devicon-php-plain colored icon"></i><span class="skill-name">PHP (Expert)</span></div>
+        <div class="skill-card"><i class="devicon-laravel-plain colored icon"></i><span class="skill-name">Laravel (Expert)</span></div>
+        <div class="skill-card"><i class="devicon-javascript-plain colored icon"></i><span class="skill-name">JavaScript (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-vuejs-plain colored icon"></i><span class="skill-name">Vue.js (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-css3-plain colored icon"></i><span class="skill-name">CSS (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-bootstrap-plain colored icon"></i><span class="skill-name">Bootstrap (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-jquery-plain colored icon"></i><span class="skill-name">jQuery (Proficient)</span></div>
+    </div>
 
-  <h2>Databases</h2>
-  <div class="skills-grid">
-    <div class="skill-card" data-brand="mysql"><i class="devicon-mysql-plain colored"></i><p>MySQL (Proficient)</p></div>
-    <div class="skill-card" data-brand="postgres"><i class="devicon-postgresql-plain colored"></i><p>PostgreSQL (Proficient)</p></div>
-    <div class="skill-card" data-brand="mongodb"><i class="devicon-mongodb-plain colored"></i><p>MongoDB (Familiar)</p></div>
-    <div class="skill-card" data-brand="elasticsearch"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Elasticsearch_logo.svg" alt="Elasticsearch" style="height:40px;filter:none;"><p>Elasticsearch (Intermediate)</p></div>
-  </div>
+    <h2>Databases</h2>
+    <div class="grid">
+        <div class="skill-card"><i class="devicon-mysql-plain colored icon"></i><span class="skill-name">MySQL (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-postgresql-plain colored icon"></i><span class="skill-name">PostgreSQL (Proficient)</span></div>
+        <div class="skill-card"><i class="devicon-mongodb-plain colored icon"></i><span class="skill-name">MongoDB (Familiar)</span></div>
+        <div class="skill-card"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg" alt="Elasticsearch" class="icon" width="28"><span class="skill-name">Elasticsearch (Intermediate)</span></div>
+    </div>
 
-  <h2>Cloud & DevOps</h2>
-  <div class="skills-grid">
-    <div class="skill-card" data-brand="aws"><i class="devicon-amazonwebservices-plain colored"></i><p>AWS (Familiar)</p></div>
-    <div class="skill-card" data-brand="docker"><i class="devicon-docker-plain colored"></i><p>Docker (Familiar)</p></div>
-    <div class="skill-card" data-brand="gha"><i class="devicon-githubactions-plain colored"></i><p>GitHub Actions (Proficient)</p></div>
-  </div>
+    <h2>Cloud & DevOps</h2>
+    <div class="grid">
+        <div class="skill-card"><i class="devicon-amazonwebservices-plain colored icon"></i><span class="skill-name">AWS (Familiar)</span></div>
+        <div class="skill-card"><i class="devicon-docker-plain colored icon"></i><span class="skill-name">Docker (Familiar)</span></div>
+        <div class="skill-card"><i class="devicon-githubactions-plain colored icon"></i><span class="skill-name">GitHub Actions (Proficient)</span></div>
+    </div>
 
-  <h2>Tools & Platforms</h2>
-  <div class="skills-grid">
-    <div class="skill-card" data-brand="git"><i class="devicon-git-plain colored"></i><p>Git</p></div>
-    <div class="skill-card"><p>Composer</p></div>
-    <div class="skill-card"><p>npm / yarn</p></div>
-    <div class="skill-card"><p>Postman</p></div>
-    <div class="skill-card"><p>Linux Server Administration</p></div>
-  </div>
+    <h2>Tools & Platforms</h2>
+    <div class="grid">
+        <div class="skill-card"><i class="devicon-git-plain colored icon"></i><span class="skill-name">Git</span></div>
+        <div class="skill-card">Composer</div>
+        <div class="skill-card">npm / yarn</div>
+        <div class="skill-card">Postman</div>
+        <div class="skill-card">Linux Server Administration</div>
+    </div>
 
-  <h2>Soft Skills</h2>
-  <div class="soft-skills">
-    <ul>
-      <li>Problem-Solving</li>
-      <li>Communication</li>
-      <li>Time Management</li>
-      <li>Adaptability</li>
-      <li>Team Collaboration</li>
-      <li>Attention to Detail</li>
-      <li>Self-Motivation</li>
-      <li>Critical Thinking</li>
-    </ul>
-  </div>
+    <h2>Soft Skills</h2>
+    <div class="soft-skills">
+        <ul>
+            <li>Problem-Solving</li>
+            <li>Communication</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+            <li>Team Collaboration</li>
+            <li>Attention to Detail</li>
+            <li>Self-Motivation</li>
+            <li>Critical Thinking</li>
+        </ul>
+    </div>
 
 </body>
 </html>
