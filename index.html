@@ -72,7 +72,9 @@
 
     .skill-card i,
     .skill-card img {
-      font-size: 28px;
+      font-size: 40px; /* for Devicon icons */
+      width: 40px;     /* for custom images */
+      height: 40px;
       margin-right: 12px;
       flex-shrink: 0;
     }
@@ -141,13 +143,51 @@
       <div class="skill-card"><i class="devicon-githubactions-plain colored"></i> GitHub Actions (Proficient)</div>
     </div>
 
-    <h2><i class="fas fa-wrench" style="color:#4a4a4a;"></i> Tools & Platforms</h2>
+    <h2><i class="fas fa-tools" style="color:#4a4a4a;"></i> Tools & Platforms</h2>
     <div class="grid">
-      <div class="skill-card"><i class="devicon-git-plain colored"></i> Git</div>
-      <div class="skill-card">Composer</div>
-      <div class="skill-card">npm / yarn</div>
-      <div class="skill-card">Postman</div>
-      <div class="skill-card">Linux Server Administration</div>
+      
+      <!-- Git -->
+      <div class="skill-card">
+        <i class="devicon-git-plain colored"></i>
+        <span>Git</span>
+      </div>
+
+      <!-- Composer -->
+      <div class="skill-card">
+        <i class="devicon-composer-line colored"></i>
+        <span>Composer</span>
+      </div>
+
+      <!-- npm -->
+      <div class="skill-card">
+        <i class="devicon-npm-original-wordmark colored"></i>
+        <span>npm</span>
+      </div>
+
+      <!-- yarn -->
+      <div class="skill-card">
+        <i class="devicon-yarn-plain colored"></i>
+        <span>yarn</span>
+      </div>
+
+      <!-- Postman (custom icon) -->
+      <div class="skill-card">
+        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" class="custom-icon">
+        <span>Postman</span>
+      </div>
+
+      <!-- phpMyAdmin (optional) -->
+      <div class="skill-card">
+        <img src="https://www.phpmyadmin.net/static/images/logo.png" alt="phpMyAdmin" class="custom-icon">
+        <span>phpMyAdmin</span>
+      </div>
+
+      <!-- Linux -->
+      <div class="skill-card">
+        <i class="devicon-linux-plain colored"></i>
+        <span>Linux Server Administration</span>
+      </div>
+
     </div>
 
     <h2><i class="fas fa-users" style="color:#4a4a4a;"></i> Soft Skills</h2>
