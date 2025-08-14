@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Skillset</title>
+
+  <!-- Devicon Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin: 0;
+    }
+    .skill-category {
+      background: white;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .skill-category h3 {
+      margin-top: 0;
+      color: #555;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      text-align: center;
+      padding: 10px;
+      background: #fafafa;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+    }
+    .skill:hover {
+      transform: scale(1.05);
+      background: #f0f0f0;
+    }
+    .skill i,
+    .skill img {
+      font-size: 40px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .level {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.8em;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .proficient { background: #4CAF50; color: white; }
+    .familiar   { background: #FF9800; color: white; }
+    .intermediate { background: #9C27B0; color: white; }
+  </style>
+</head>
+<body>
+
+<h1>Tech Skillset</h1>
+
+<!-- Languages & Frameworks -->
+<div class="skill-category">
+  <h3>Languages & Frameworks</h3>
+  <div class="skills-grid">
+    <div class="skill"><i class="devicon-php-plain colored"></i>PHP<div class="level proficient">Expert</div></div>
+    <div class="skill"><i class="devicon-laravel-plain colored"></i>Laravel<div class="level proficient">Expert</div></div>
+    <div class="skill"><i class="devicon-javascript-plain colored"></i>JavaScript<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-vuejs-plain colored"></i>Vue.js<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-css3-plain colored"></i>CSS<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-bootstrap-plain colored"></i>Bootstrap<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-jquery-plain colored"></i>jQuery<div class="level proficient">Proficient</div></div>
+  </div>
+</div>
+
+<!-- Databases -->
+<div class="skill-category">
+  <h3>Databases</h3>
+  <div class="skills-grid">
+    <div class="skill"><i class="devicon-mysql-plain colored"></i>MySQL<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-postgresql-plain colored"></i>PostgreSQL<div class="level proficient">Proficient</div></div>
+    <div class="skill"><i class="devicon-mongodb-plain colored"></i>MongoDB<div class="level familiar">Familiar</div></div>
+    <div class="skill"><i class="devicon-elasticsearch-plain colored"></i>Elasticsearch<div class="level intermediate">Intermediate</div></div>
+  </div>
+</div>
+
+<!-- Cloud & DevOps -->
+<div class="skill-category">
+  <h3>Cloud & DevOps</h3>
+  <div class="skills-grid">
+    <div class="skill"><i class="devicon-amazonwebservices-plain colored"></i>AWS<div class="level familiar">Familiar</div></div>
+    <div class="skill"><i class="devicon-docker-plain colored"></i>Docker<div class="level familiar">Familiar</div></div>
+    <div class="skill"><i class="devicon-githubactions-plain colored"></i>GitHub Actions<div class="level proficient">Proficient</div></div>
+  </div>
+</div>
+
+<!-- Tools & Platforms -->
+<div class="skill-category">
+  <h3>Tools & Platforms</h3>
+  <div class="skills-grid">
+    <div class="skill"><i class="devicon-git-plain colored"></i>Git</div>
+    <div class="skill"><i class="devicon-composer-line colored"></i>Composer</div>
+    <div class="skill"><i class="devicon-npm-original-wordmark colored"></i>npm/yarn</div>
+    <div class="skill"><i class="devicon-postman-plain colored"></i>Postman</div>
+    <div class="skill"><i class="devicon-linux-plain colored"></i>Linux Server Administration</div>
+  </div>
+</div>
+
+</body>
+</html>
