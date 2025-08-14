@@ -22,27 +22,49 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 30px;
         }
         .skill {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px;
             background: #fafafa;
             border: 1px solid #eee;
             border-radius: 6px;
+            padding: 10px;
             transition: background-color 0.2s ease, box-shadow 0.2s ease;
         }
         .skill:hover {
             background-color: #f5f7fa;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
         .icon {
             font-size: 1.6em;
         }
+        .skill-name {
+            font-weight: 500;
+            font-size: 1em;
+        }
+        .bar-container {
+            background-color: #e6e9ed;
+            border-radius: 4px;
+            height: 6px;
+            overflow: hidden;
+        }
+        .bar {
+            height: 100%;
+            border-radius: 4px;
+        }
+        .expert { width: 100%; background-color: #28a745; }
+        .proficient { width: 80%; background-color: #17a2b8; }
+        .intermediate { width: 60%; background-color: #ffc107; }
+        .familiar { width: 40%; background-color: #fd7e14; }
+
         .soft-skills {
             background-color: #f8f9fa;
             border: 1px solid #e5e5e5;
@@ -68,37 +90,94 @@
 <body>
     <h2>Languages & Frameworks</h2>
     <div class="grid">
-        <div class="skill"><i class="devicon-php-plain colored icon"></i>PHP (Expert)</div>
-        <div class="skill"><i class="devicon-laravel-plain colored icon"></i>Laravel (Expert)</div>
-        <div class="skill"><i class="devicon-javascript-plain colored icon"></i>JavaScript (Proficient)</div>
-        <div class="skill"><i class="devicon-vuejs-plain colored icon"></i>Vue.js (Proficient)</div>
-        <div class="skill"><i class="devicon-css3-plain colored icon"></i>CSS (Proficient)</div>
-        <div class="skill"><i class="devicon-bootstrap-plain colored icon"></i>Bootstrap (Proficient)</div>
-        <div class="skill"><i class="devicon-jquery-plain colored icon"></i>jQuery (Proficient)</div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-php-plain colored icon"></i><span class="skill-name">PHP</span></div>
+            <div class="bar-container"><div class="bar expert"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-laravel-plain colored icon"></i><span class="skill-name">Laravel</span></div>
+            <div class="bar-container"><div class="bar expert"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-javascript-plain colored icon"></i><span class="skill-name">JavaScript</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-vuejs-plain colored icon"></i><span class="skill-name">Vue.js</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-css3-plain colored icon"></i><span class="skill-name">CSS</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-bootstrap-plain colored icon"></i><span class="skill-name">Bootstrap</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-jquery-plain colored icon"></i><span class="skill-name">jQuery</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
     </div>
 
     <h2>Databases</h2>
     <div class="grid">
-        <div class="skill"><i class="devicon-mysql-plain colored icon"></i>MySQL (Proficient)</div>
-        <div class="skill"><i class="devicon-postgresql-plain colored icon"></i>PostgreSQL (Proficient)</div>
-        <div class="skill"><i class="devicon-mongodb-plain colored icon"></i>MongoDB (Familiar)</div>
-        <div class="skill"><img src="elasticsearch.svg" alt="Elasticsearch" class="icon" width="22">Elasticsearch (Intermediate)</div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-mysql-plain colored icon"></i><span class="skill-name">MySQL</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-postgresql-plain colored icon"></i><span class="skill-name">PostgreSQL</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-mongodb-plain colored icon"></i><span class="skill-name">MongoDB</span></div>
+            <div class="bar-container"><div class="bar familiar"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><img src="elasticsearch.svg" alt="Elasticsearch" class="icon" width="22"><span class="skill-name">Elasticsearch</span></div>
+            <div class="bar-container"><div class="bar intermediate"></div></div>
+        </div>
     </div>
 
     <h2>Cloud & DevOps</h2>
     <div class="grid">
-        <div class="skill"><i class="devicon-amazonwebservices-plain colored icon"></i>AWS (Familiar)</div>
-        <div class="skill"><i class="devicon-docker-plain colored icon"></i>Docker (Familiar)</div>
-        <div class="skill"><i class="devicon-githubactions-plain colored icon"></i>GitHub Actions (Proficient)</div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-amazonwebservices-plain colored icon"></i><span class="skill-name">AWS</span></div>
+            <div class="bar-container"><div class="bar familiar"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-docker-plain colored icon"></i><span class="skill-name">Docker</span></div>
+            <div class="bar-container"><div class="bar familiar"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-githubactions-plain colored icon"></i><span class="skill-name">GitHub Actions</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
     </div>
 
     <h2>Tools & Platforms</h2>
     <div class="grid">
-        <div class="skill"><i class="devicon-git-plain colored icon"></i>Git</div>
-        <div class="skill">Composer</div>
-        <div class="skill">npm / yarn</div>
-        <div class="skill">Postman</div>
-        <div class="skill">Linux Server Administration</div>
+        <div class="skill">
+            <div class="skill-header"><i class="devicon-git-plain colored icon"></i><span class="skill-name">Git</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><span class="skill-name">Composer</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><span class="skill-name">npm / yarn</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><span class="skill-name">Postman</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
+        <div class="skill">
+            <div class="skill-header"><span class="skill-name">Linux Server Administration</span></div>
+            <div class="bar-container"><div class="bar proficient"></div></div>
+        </div>
     </div>
 
     <h2>Soft Skills</h2>
