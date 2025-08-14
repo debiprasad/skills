@@ -7,189 +7,118 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 20px;
+            background-color: #f5f7fa;
             color: #333;
         }
         h2 {
             color: #222;
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 4px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
-        .grid {
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin-bottom: 30px;
+            margin-top: 15px;
         }
-        .skill {
-            background: #fafafa;
-            border: 1px solid #eee;
-            border-radius: 6px;
-            padding: 10px;
-            transition: background-color 0.2s ease, box-shadow 0.2s ease;
-        }
-        .skill:hover {
-            background-color: #f5f7fa;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-        .skill-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 6px;
-        }
-        .icon {
-            font-size: 1.6em;
-        }
-        .skill-name {
-            font-weight: 500;
-            font-size: 1em;
-        }
-        .bar-container {
-            background-color: #e6e9ed;
-            border-radius: 4px;
-            height: 6px;
-            overflow: hidden;
-        }
-        .bar {
-            height: 100%;
-            border-radius: 4px;
-        }
-        .expert { width: 100%; background-color: #28a745; }
-        .proficient { width: 80%; background-color: #17a2b8; }
-        .intermediate { width: 60%; background-color: #ffc107; }
-        .familiar { width: 40%; background-color: #fd7e14; }
-
-        .soft-skills {
-            background-color: #f8f9fa;
-            border: 1px solid #e5e5e5;
+        .skill-card {
+            background: #fff;
+            border-radius: 10px;
             padding: 15px;
-            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
         }
-        .skill-tag {
-            display: inline-block;
-            background-color: #e6e9ed;
-            color: #333;
-            padding: 5px 12px;
-            margin: 5px 5px 0 0;
-            border-radius: 4px;
-            font-size: 0.9em;
+        .skill-card:hover {
+            transform: translateY(-3px);
+        }
+        .skill-card i, .skill-card img {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .skill-title {
+            font-weight: 600;
+        }
+        /* Soft Skills Styling */
+        .soft-skills {
+            background-color: #eef7f9;
+            border-left: 4px solid #5bc0de;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .soft-skills h2 {
+            border-bottom: none;
+            color: #31708f;
+        }
+        .soft-skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .soft-skill-tag {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
             font-weight: 500;
-            transition: background-color 0.15s ease;
-        }
-        .skill-tag:hover {
-            background-color: #d9dde3;
         }
     </style>
 </head>
 <body>
+
     <h2>Languages & Frameworks</h2>
-    <div class="grid">
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-php-plain colored icon"></i><span class="skill-name">PHP</span></div>
-            <div class="bar-container"><div class="bar expert"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-laravel-plain colored icon"></i><span class="skill-name">Laravel</span></div>
-            <div class="bar-container"><div class="bar expert"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-javascript-plain colored icon"></i><span class="skill-name">JavaScript</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-vuejs-plain colored icon"></i><span class="skill-name">Vue.js</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-css3-plain colored icon"></i><span class="skill-name">CSS</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-bootstrap-plain colored icon"></i><span class="skill-name">Bootstrap</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-jquery-plain colored icon"></i><span class="skill-name">jQuery</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="devicon-php-plain colored"></i><div class="skill-title">PHP (Expert)</div></div>
+        <div class="skill-card"><i class="devicon-laravel-plain colored"></i><div class="skill-title">Laravel (Expert)</div></div>
+        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><div class="skill-title">JavaScript (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-vuejs-plain colored"></i><div class="skill-title">Vue.js (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-css3-plain colored"></i><div class="skill-title">CSS (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i><div class="skill-title">Bootstrap (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-jquery-plain colored"></i><div class="skill-title">jQuery (Proficient)</div></div>
     </div>
 
     <h2>Databases</h2>
-    <div class="grid">
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-mysql-plain colored icon"></i><span class="skill-name">MySQL</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-postgresql-plain colored icon"></i><span class="skill-name">PostgreSQL</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-mongodb-plain colored icon"></i><span class="skill-name">MongoDB</span></div>
-            <div class="bar-container"><div class="bar familiar"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><img src="elasticsearch.svg" alt="Elasticsearch" class="icon" width="22"><span class="skill-name">Elasticsearch</span></div>
-            <div class="bar-container"><div class="bar intermediate"></div></div>
-        </div>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="devicon-mysql-plain colored"></i><div class="skill-title">MySQL (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-postgresql-plain colored"></i><div class="skill-title">PostgreSQL (Proficient)</div></div>
+        <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><div class="skill-title">MongoDB (Familiar)</div></div>
+        <div class="skill-card"><img src="elasticsearch.svg" alt="Elasticsearch" width="40"><div class="skill-title">Elasticsearch (Intermediate)</div></div>
     </div>
 
     <h2>Cloud & DevOps</h2>
-    <div class="grid">
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-amazonwebservices-plain colored icon"></i><span class="skill-name">AWS</span></div>
-            <div class="bar-container"><div class="bar familiar"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-docker-plain colored icon"></i><span class="skill-name">Docker</span></div>
-            <div class="bar-container"><div class="bar familiar"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-githubactions-plain colored icon"></i><span class="skill-name">GitHub Actions</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="devicon-amazonwebservices-plain colored"></i><div class="skill-title">AWS (Familiar)</div></div>
+        <div class="skill-card"><i class="devicon-docker-plain colored"></i><div class="skill-title">Docker (Familiar)</div></div>
+        <div class="skill-card"><i class="devicon-githubactions-plain colored"></i><div class="skill-title">GitHub Actions (Proficient)</div></div>
     </div>
 
     <h2>Tools & Platforms</h2>
-    <div class="grid">
-        <div class="skill">
-            <div class="skill-header"><i class="devicon-git-plain colored icon"></i><span class="skill-name">Git</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><span class="skill-name">Composer</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><span class="skill-name">npm / yarn</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><span class="skill-name">Postman</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
-        </div>
-        <div class="skill">
-            <div class="skill-header"><span class="skill-name">Linux Server Administration</span></div>
-            <div class="bar-container"><div class="bar proficient"></div></div>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="devicon-git-plain colored"></i><div class="skill-title">Git</div></div>
+        <div class="skill-card">Composer</div>
+        <div class="skill-card">npm / yarn</div>
+        <div class="skill-card">Postman</div>
+        <div class="skill-card">Linux Server Administration</div>
+    </div>
+
+    <div class="soft-skills" style="margin-top: 40px;">
+        <h2>Soft Skills</h2>
+        <div class="soft-skill-tags">
+            <div class="soft-skill-tag">Problem-Solving</div>
+            <div class="soft-skill-tag">Communication</div>
+            <div class="soft-skill-tag">Time Management</div>
+            <div class="soft-skill-tag">Adaptability</div>
+            <div class="soft-skill-tag">Team Collaboration</div>
+            <div class="soft-skill-tag">Attention to Detail</div>
+            <div class="soft-skill-tag">Self-Motivation</div>
+            <div class="soft-skill-tag">Critical Thinking</div>
         </div>
     </div>
 
-    <h2>Soft Skills</h2>
-    <div class="soft-skills">
-        <span class="skill-tag">Problem-Solving</span>
-        <span class="skill-tag">Communication</span>
-        <span class="skill-tag">Time Management</span>
-        <span class="skill-tag">Adaptability</span>
-        <span class="skill-tag">Team Collaboration</span>
-        <span class="skill-tag">Attention to Detail</span>
-        <span class="skill-tag">Self-Motivation</span>
-        <span class="skill-tag">Critical Thinking</span>
-    </div>
 </body>
 </html>
