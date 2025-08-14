@@ -16,47 +16,38 @@
         h2 {
             color: #222;
             font-size: 1.4rem;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 4px;
         }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-bottom: 25px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
         }
-        li {
-            margin-bottom: 6px;
-            padding: 4px 0;
+        .skill {
             display: flex;
             align-items: center;
-            transition: background-color 0.2s ease;
+            gap: 10px;
+            padding: 10px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
         }
-        li:hover {
+        .skill:hover {
             background-color: #f5f7fa;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
         .icon {
-            margin-right: 8px;
-            vertical-align: middle;
-            font-size: 1.1em;
-            color: #555;
+            font-size: 1.6em;
         }
-        img.icon {
-            display: inline-block;
-        }
-
-        /* Soft Skills section styling */
         .soft-skills {
             background-color: #f8f9fa;
             border: 1px solid #e5e5e5;
             padding: 15px;
             border-radius: 6px;
-            margin-top: 20px;
-        }
-        .soft-skills h2 {
-            border-bottom: none;
-            margin-bottom: 10px;
-            color: #444;
         }
         .skill-tag {
             display: inline-block;
@@ -76,42 +67,42 @@
 </head>
 <body>
     <h2>Languages & Frameworks</h2>
-    <ul>
-        <li><i class="devicon-php-plain icon"></i>PHP (Expert)</li>
-        <li><i class="devicon-laravel-plain icon"></i>Laravel (Expert)</li>
-        <li><i class="devicon-javascript-plain icon"></i>JavaScript (Proficient)</li>
-        <li><i class="devicon-vuejs-plain icon"></i>Vue.js (Proficient)</li>
-        <li><i class="devicon-css3-plain icon"></i>CSS (Proficient)</li>
-        <li><i class="devicon-bootstrap-plain icon"></i>Bootstrap (Proficient)</li>
-        <li><i class="devicon-jquery-plain icon"></i>jQuery (Proficient)</li>
-    </ul>
+    <div class="grid">
+        <div class="skill"><i class="devicon-php-plain colored icon"></i>PHP (Expert)</div>
+        <div class="skill"><i class="devicon-laravel-plain colored icon"></i>Laravel (Expert)</div>
+        <div class="skill"><i class="devicon-javascript-plain colored icon"></i>JavaScript (Proficient)</div>
+        <div class="skill"><i class="devicon-vuejs-plain colored icon"></i>Vue.js (Proficient)</div>
+        <div class="skill"><i class="devicon-css3-plain colored icon"></i>CSS (Proficient)</div>
+        <div class="skill"><i class="devicon-bootstrap-plain colored icon"></i>Bootstrap (Proficient)</div>
+        <div class="skill"><i class="devicon-jquery-plain colored icon"></i>jQuery (Proficient)</div>
+    </div>
 
     <h2>Databases</h2>
-    <ul>
-        <li><i class="devicon-mysql-plain icon"></i>MySQL (Proficient)</li>
-        <li><i class="devicon-postgresql-plain icon"></i>PostgreSQL (Proficient)</li>
-        <li><i class="devicon-mongodb-plain icon"></i>MongoDB (Familiar)</li>
-        <li><img src="elasticsearch.svg" alt="Elasticsearch Logo" class="icon" width="18">Elasticsearch (Intermediate)</li>
-    </ul>
+    <div class="grid">
+        <div class="skill"><i class="devicon-mysql-plain colored icon"></i>MySQL (Proficient)</div>
+        <div class="skill"><i class="devicon-postgresql-plain colored icon"></i>PostgreSQL (Proficient)</div>
+        <div class="skill"><i class="devicon-mongodb-plain colored icon"></i>MongoDB (Familiar)</div>
+        <div class="skill"><img src="elasticsearch.svg" alt="Elasticsearch" class="icon" width="22">Elasticsearch (Intermediate)</div>
+    </div>
 
     <h2>Cloud & DevOps</h2>
-    <ul>
-        <li><i class="devicon-amazonwebservices-plain icon"></i>AWS (Familiar)</li>
-        <li><i class="devicon-docker-plain icon"></i>Docker (Familiar)</li>
-        <li><i class="devicon-githubactions-plain icon"></i>GitHub Actions (Proficient)</li>
-    </ul>
+    <div class="grid">
+        <div class="skill"><i class="devicon-amazonwebservices-plain colored icon"></i>AWS (Familiar)</div>
+        <div class="skill"><i class="devicon-docker-plain colored icon"></i>Docker (Familiar)</div>
+        <div class="skill"><i class="devicon-githubactions-plain colored icon"></i>GitHub Actions (Proficient)</div>
+    </div>
 
     <h2>Tools & Platforms</h2>
-    <ul>
-        <li><i class="devicon-git-plain icon"></i>Git</li>
-        <li>Composer</li>
-        <li>npm/yarn</li>
-        <li>Postman</li>
-        <li>Linux Server Administration</li>
-    </ul>
+    <div class="grid">
+        <div class="skill"><i class="devicon-git-plain colored icon"></i>Git</div>
+        <div class="skill">Composer</div>
+        <div class="skill">npm / yarn</div>
+        <div class="skill">Postman</div>
+        <div class="skill">Linux Server Administration</div>
+    </div>
 
+    <h2>Soft Skills</h2>
     <div class="soft-skills">
-        <h2>Soft Skills</h2>
         <span class="skill-tag">Problem-Solving</span>
         <span class="skill-tag">Communication</span>
         <span class="skill-tag">Time Management</span>
