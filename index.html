@@ -61,8 +61,7 @@
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
       display: flex;
-      flex-direction: column; /* stack content vertically */
-      align-items: flex-start; /* align text and bar left */
+      flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -71,12 +70,18 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
     }
 
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .skill-card i,
     .skill-card img {
-      font-size: 28px;
-      margin-right: 12px;
+      font-size: 40px;  /* for icon fonts */
+      width: 40px;      /* for custom images */
+      height: 40px;
       flex-shrink: 0;
-      margin-bottom: 5px; /* space before progress bar */
     }
 
     .soft-skills {
@@ -107,15 +112,12 @@
       width: 40px;
       height: 40px;
       object-fit: contain;
-      margin-right: 12px;
       flex-shrink: 0;
-      margin-bottom: 5px;
     }
 
     /* Progress bar styles */
     .level-bar {
       width: 100%;
-      margin-left: 0;
       margin-top: 6px;
       height: 14px;
       border-radius: 7px;
@@ -177,31 +179,73 @@
 
     <h2><i class="devicon-codepen-plain"></i> Languages & Frameworks</h2>
     <div class="grid">
-      <div class="skill-card"><i class="devicon-php-plain colored"></i> PHP<div class="level-bar expert"><span>Expert</span></div></div>
-      <div class="skill-card"><i class="devicon-laravel-plain colored"></i> Laravel<div class="level-bar expert"><span>Expert</span></div></div>
-      <div class="skill-card"><i class="devicon-javascript-plain colored"></i> JavaScript<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-vuejs-plain colored"></i> Vue.js<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-css3-plain colored"></i> CSS<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i> Bootstrap<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-jquery-plain colored"></i> jQuery<div class="level-bar proficient"><span>Proficient</span></div></div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+        <div class="level-bar expert"><span>Expert</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+        <div class="level-bar expert"><span>Expert</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-vuejs-plain colored"></i><span>Vue.js</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
     </div>
 
     <h2><i class="fas fa-database" style="color:#4a4a4a;"></i> Databases</h2>
     <div class="grid">
-      <div class="skill-card"><i class="devicon-mysql-plain colored"></i> MySQL<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-postgresql-plain colored"></i> PostgreSQL<div class="level-bar proficient"><span>Proficient</span></div></div>
-      <div class="skill-card"><i class="devicon-mongodb-plain colored"></i> MongoDB<div class="level-bar familiar"><span>Familiar</span></div></div>
       <div class="skill-card">
-        <img src="https://icon.icepanel.io/Technology/png-shadow-512/Elastic-Search.png" alt="Elasticsearch Icon" width="28" height="28">
-        Elasticsearch<div class="level-bar intermediate"><span>Intermediate</span></div>
+        <div class="skill-header"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+        <div class="level-bar familiar"><span>Familiar</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header">
+          <img src="https://icon.icepanel.io/Technology/png-shadow-512/Elastic-Search.png" alt="Elasticsearch Icon" width="28" height="28">
+          <span>Elasticsearch</span>
+        </div>
+        <div class="level-bar intermediate"><span>Intermediate</span></div>
       </div>
     </div>
 
     <h2><i class="devicon-amazonwebservices-plain"></i> Cloud & DevOps</h2>
     <div class="grid">
-      <div class="skill-card"><i class="devicon-amazonwebservices-plain colored"></i> AWS<div class="level-bar familiar"><span>Familiar</span></div></div>
-      <div class="skill-card"><i class="devicon-docker-plain colored"></i> Docker<div class="level-bar familiar"><span>Familiar</span></div></div>
-      <div class="skill-card"><i class="devicon-githubactions-plain colored"></i> GitHub Actions<div class="level-bar proficient"><span>Proficient</span></div></div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-amazonwebservices-plain colored"></i><span>AWS</span></div>
+        <div class="level-bar familiar"><span>Familiar</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+        <div class="level-bar familiar"><span>Familiar</span></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-header"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
+        <div class="level-bar proficient"><span>Proficient</span></div>
+      </div>
     </div>
 
     <h2><i class="fas fa-tools" style="color:#4a4a4a;"></i> Tools & Platforms</h2>
