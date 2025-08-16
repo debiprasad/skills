@@ -68,21 +68,21 @@
     .skill-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-      background-color: #f9fbfd; /* light tint for light mode */
+      background-color: #f9fbfd;
+    }
+
+    .skill-card i,
+    .skill-card img {
+      font-size: 40px;  /* icon size */
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
     }
 
     .skill-header {
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .skill-card i,
-    .skill-card img {
-      font-size: 40px;  /* for icon fonts */
-      width: 40px;      /* for custom images */
-      height: 40px;
-      flex-shrink: 0;
     }
 
     .soft-skills {
@@ -107,13 +107,6 @@
       border-radius: 6px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       text-align: center;
-    }
-
-    .skill-card img.custom-icon {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      flex-shrink: 0;
     }
 
     /* Progress bar styles */
@@ -146,27 +139,21 @@
       height: 100%;
       border-radius: 7px;
       z-index: 1;
+      width: 0; /* collapsed initially */
+      transition: width 1.2s ease;
     }
 
-    .level-bar.expert::before {
-      width: 100%;
-      background: #2e7d32; /* green */
-    }
+    /* Base colors (light mode) */
+    .level-bar.expert::before { background: #2e7d32; }
+    .level-bar.proficient::before { background: #1976d2; }
+    .level-bar.intermediate::before { background: #f9a825; }
+    .level-bar.familiar::before { background: #757575; }
 
-    .level-bar.proficient::before {
-      width: 75%;
-      background: #1976d2; /* blue */
-    }
-
-    .level-bar.intermediate::before {
-      width: 50%;
-      background: #f9a825; /* yellow-orange */
-    }
-
-    .level-bar.familiar::before {
-      width: 25%;
-      background: #757575; /* gray */
-    }
+    /* Animate widths */
+    body.animate .level-bar.expert::before { width: 100%; }
+    body.animate .level-bar.proficient::before { width: 75%; }
+    body.animate .level-bar.intermediate::before { width: 50%; }
+    body.animate .level-bar.familiar::before { width: 25%; }
 
     /* Dark Mode */
     @media (prefers-color-scheme: dark) {
@@ -176,7 +163,7 @@
       }
 
       header {
-        background: linear-gradient(135deg, #1b5e20, #0d47a1); /* deep green + deep blue */
+        background: linear-gradient(135deg, #1b5e20, #0d47a1);
       }
 
       h2 {
@@ -189,8 +176,8 @@
       }
 
       .skill-card:hover {
-        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08); /* subtle light glow */
-        background-color: #2a2a2a; /* darker tint for dark mode */
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08);
+        background-color: #2a2a2a;
       }
 
       .soft-skills {
@@ -203,29 +190,18 @@
       }
 
       .level-bar {
-        background: #333; /* progress bar background in dark mode */
+        background: #333;
       }
 
-      .level-bar.expert::before {
-        background: #66bb6a; /* softer green */
-      }
-
-      .level-bar.proficient::before {
-        background: #42a5f5; /* softer blue */
-      }
-
-      .level-bar.intermediate::before {
-        background: #fbc02d; /* warmer yellow */
-      }
-
-      .level-bar.familiar::before {
-        background: #9e9e9e; /* lighter gray */
-      }
+      /* Dark mode bar colors */
+      .level-bar.expert::before { background: #66bb6a; }
+      .level-bar.proficient::before { background: #42a5f5; }
+      .level-bar.intermediate::before { background: #fbc02d; }
+      .level-bar.familiar::before { background: #9e9e9e; }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Debiprasad Sahoo</h1>
     <p>Full-Stack Developer | PHP, Laravel, JavaScript, Vue.js</p>
@@ -233,6 +209,7 @@
 
   <main style="padding: 20px;">
 
+    <!-- Languages & Frameworks -->
     <h2><i class="devicon-codepen-plain"></i> Languages & Frameworks</h2>
     <div class="grid">
       <div class="skill-card">
@@ -265,6 +242,7 @@
       </div>
     </div>
 
+    <!-- Databases -->
     <h2><i class="fas fa-database" style="color:#4a4a4a;"></i> Databases</h2>
     <div class="grid">
       <div class="skill-card">
@@ -281,13 +259,14 @@
       </div>
       <div class="skill-card">
         <div class="skill-header">
-          <img src="https://icon.icepanel.io/Technology/png-shadow-512/Elastic-Search.png" alt="Elasticsearch Icon" width="28" height="28">
+          <img src="https://icon.icepanel.io/Technology/png-shadow-512/Elastic-Search.png" alt="Elasticsearch Icon">
           <span>Elasticsearch</span>
         </div>
         <div class="level-bar intermediate"><span>Intermediate</span></div>
       </div>
     </div>
 
+    <!-- Cloud & DevOps -->
     <h2><i class="devicon-amazonwebservices-plain"></i> Cloud & DevOps</h2>
     <div class="grid">
       <div class="skill-card">
@@ -304,53 +283,19 @@
       </div>
     </div>
 
+    <!-- Tools & Platforms -->
     <h2><i class="fas fa-tools" style="color:#4a4a4a;"></i> Tools & Platforms</h2>
     <div class="grid">
-      <div class="skill-card">
-        <div class="skill-header">
-          <i class="devicon-git-plain colored"></i><span>Git</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <i class="devicon-composer-line colored"></i><span>Composer</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <i class="devicon-npm-original-wordmark colored"></i><span>npm</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <i class="devicon-yarn-plain colored"></i><span>yarn</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" class="custom-icon">
-          <span>Postman</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <img src="https://www.phpmyadmin.net/static/images/logo.png" alt="phpMyAdmin" class="custom-icon">
-          <span>phpMyAdmin</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-header">
-          <i class="devicon-linux-plain colored"></i><span>Linux Server Administration</span>
-        </div>
-      </div>
+      <div class="skill-card"><div class="skill-header"><i class="devicon-git-plain colored"></i><span>Git</span></div></div>
+      <div class="skill-card"><div class="skill-header"><i class="devicon-composer-line colored"></i><span>Composer</span></div></div>
+      <div class="skill-card"><div class="skill-header"><i class="devicon-npm-original-wordmark colored"></i><span>npm</span></div></div>
+      <div class="skill-card"><div class="skill-header"><i class="devicon-yarn-plain colored"></i><span>yarn</span></div></div>
+      <div class="skill-card"><div class="skill-header"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman"><span>Postman</span></div></div>
+      <div class="skill-card"><div class="skill-header"><img src="https://www.phpmyadmin.net/static/images/logo.png" alt="phpMyAdmin"><span>phpMyAdmin</span></div></div>
+      <div class="skill-card"><div class="skill-header"><i class="devicon-linux-plain colored"></i><span>Linux Server Administration</span></div></div>
     </div>
 
+    <!-- Soft Skills -->
     <h2><i class="fas fa-users" style="color:#4a4a4a;"></i> Soft Skills</h2>
     <div class="soft-skills">
       <ul>
@@ -367,5 +312,10 @@
 
   </main>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      requestAnimationFrame(() => document.body.classList.add('animate'));
+    });
+  </script>
 </body>
 </html>
