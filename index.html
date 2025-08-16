@@ -166,6 +166,40 @@
       width: 25%;
       background: #757575; /* gray */
     }
+
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      header {
+        background: linear-gradient(135deg, #2e7d32, #1565c0);
+      }
+
+      h2 {
+        color: #f5f5f5;
+      }
+
+      .skill-card {
+        background: #1e1e1e;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      .soft-skills {
+        background: linear-gradient(135deg, #1c2833, #2c3e50);
+      }
+
+      .soft-skills li {
+        background: #2a2a2a;
+        color: #f5f5f5;
+      }
+
+      .level-bar {
+        background: #333; /* progress bar background in dark mode */
+      }
+    }
   </style>
 </head>
 <body>
