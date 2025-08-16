@@ -68,6 +68,7 @@
     .skill-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      background-color: #f9fbfd; /* light tint for light mode */
     }
 
     .skill-header {
@@ -175,7 +176,7 @@
       }
 
       header {
-        background: linear-gradient(135deg, #2e7d32, #1565c0);
+        background: linear-gradient(135deg, #1b5e20, #0d47a1); /* deep green + deep blue */
       }
 
       h2 {
@@ -185,6 +186,11 @@
       .skill-card {
         background: #1e1e1e;
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      .skill-card:hover {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.08); /* subtle light glow */
+        background-color: #2a2a2a; /* darker tint for dark mode */
       }
 
       .soft-skills {
@@ -198,6 +204,22 @@
 
       .level-bar {
         background: #333; /* progress bar background in dark mode */
+      }
+
+      .level-bar.expert::before {
+        background: #66bb6a; /* softer green */
+      }
+
+      .level-bar.proficient::before {
+        background: #42a5f5; /* softer blue */
+      }
+
+      .level-bar.intermediate::before {
+        background: #fbc02d; /* warmer yellow */
+      }
+
+      .level-bar.familiar::before {
+        background: #9e9e9e; /* lighter gray */
       }
     }
   </style>
